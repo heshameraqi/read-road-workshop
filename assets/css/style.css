@@ -196,13 +196,31 @@ img {
     border-radius: var(--radius-lg);
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%);
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 80%, rgba(2, 132, 199, 0.08) 0%, transparent 40%);
     pointer-events: none;
     z-index: 1;
 }
