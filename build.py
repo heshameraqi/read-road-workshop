@@ -126,28 +126,43 @@ def parse_speakers():
     description = ""
     speakers = []
     current = None
+    in_comment = False
     
     for line in lines:
+        if "<!--" in line:
+            in_comment = True
+            continue
+        if "-->" in line:
+            in_comment = False
+            continue
+        if in_comment:
+            continue
         if line.startswith("# "):
-            continue
-        elif line.startswith("<!--"):
-            continue
-        elif line.strip().startswith("-->"):
             continue
         elif line.startswith("## "):
             if current:
                 speakers.append(current)
-            current = {"name": line[3:].strip(), "photo": "placeholder.svg", "affiliation": "", "country": "", "topic": ""}
+            current = {"name": line[3:].strip(), "photo": "placeholder.svg", "url": "", "affiliation": "", "country": "", "topic": ""}
         elif current:
             if line.startswith("- photo:"):
-                current["photo"] = line.split(":", 1)[1].strip()
+                photo = line.split(":", 1)[1].strip()
+                # Check if photo file exists, fall back to placeholder
+                if photo and os.path.exists(os.path.join("assets", "images", "speakers", photo)):
+                    current["photo"] = photo
+                else:
+                    current["photo"] = "placeholder.svg"
+            elif line.startswith("- url:"):
+                current["url"] = line.split(":", 1)[1].strip()
+                # Handle urls that got split on ":"
+                if line.count(":") > 1:
+                    current["url"] = ":".join(line.split(":")[1:]).strip()
             elif line.startswith("- affiliation:"):
                 current["affiliation"] = line.split(":", 1)[1].strip()
             elif line.startswith("- country:"):
                 current["country"] = line.split(":", 1)[1].strip()
             elif line.startswith("- topic:"):
                 current["topic"] = line.split(":", 1)[1].strip()
-        elif line.strip() and not current and not line.startswith("<!--"):
+        elif line.strip() and not current:
             description = line.strip()
     
     if current:
@@ -163,21 +178,32 @@ def parse_organizers():
     
     organizers = []
     current = None
+    in_comment = False
     
     for line in lines:
+        if "<!--" in line:
+            in_comment = True
+            continue
+        if "-->" in line:
+            in_comment = False
+            continue
+        if in_comment:
+            continue
         if line.startswith("# "):
-            continue
-        elif line.startswith("<!--"):
-            continue
-        elif line.strip().startswith("-->"):
             continue
         elif line.startswith("## "):
             if current:
                 organizers.append(current)
-            current = {"name": line[3:].strip(), "photo": "placeholder.svg", "affiliation": "", "country": ""}
+            current = {"name": line[3:].strip(), "photo": "placeholder.svg", "url": "", "affiliation": "", "country": ""}
         elif current:
             if line.startswith("- photo:"):
-                current["photo"] = line.split(":", 1)[1].strip()
+                photo = line.split(":", 1)[1].strip()
+                if photo and os.path.exists(os.path.join("assets", "images", "organizers", photo)):
+                    current["photo"] = photo
+                else:
+                    current["photo"] = "placeholder.svg"
+            elif line.startswith("- url:"):
+                current["url"] = ":".join(line.split(":")[1:]).strip()
             elif line.startswith("- affiliation:"):
                 current["affiliation"] = line.split(":", 1)[1].strip()
             elif line.startswith("- country:"):
@@ -320,12 +346,13 @@ def generate_html():
     # Generate speakers HTML
     speakers_html = ""
     for s in speakers:
+        name_html = f'<a href="{s["url"]}" target="_blank">{s["name"]}</a>' if s.get("url") else s["name"]
         speakers_html += f"""
                 <div class="speaker-card">
                     <div class="speaker-image">
                         <img src="assets/images/speakers/{s['photo']}" alt="{s['name']}">
                     </div>
-                    <h3 class="speaker-name">{s['name']}</h3>
+                    <h3 class="speaker-name">{name_html}</h3>
                     <p class="speaker-affiliation">{s['affiliation']}</p>
                     <p class="speaker-topic">{s['topic']}</p>
                 </div>"""
@@ -333,12 +360,13 @@ def generate_html():
     # Generate organizers HTML
     organizers_html = ""
     for o in organizers:
+        name_html = f'<a href="{o["url"]}" target="_blank">{o["name"]}</a>' if o.get("url") else o["name"]
         organizers_html += f"""
                 <div class="organizer-card">
                     <div class="organizer-image">
                         <img src="assets/images/organizers/{o['photo']}" alt="{o['name']}">
                     </div>
-                    <h3>{o['name']}</h3>
+                    <h3>{name_html}</h3>
                     <p class="organizer-affiliation">{o['affiliation']}</p>
                     <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> {o['country']}</p>
                 </div>"""

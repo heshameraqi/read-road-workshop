@@ -2,33 +2,42 @@
 
 <!-- 
   FORMAT: Each organizer is a ## heading with metadata lines below.
-  To add/remove organizers, just add/remove a ## block.
-  Photo files go in assets/images/organizers/ (use filename matching the photo field below).
-  Use "placeholder.svg" until a real photo is added.
+  - photo: filename in assets/images/organizers/ (e.g., hesham_eraqi.jpg)
+  - url: link to personal page (optional, adds clickable link on name)
+  - affiliation: Company / University
+  - country: Country
+
+  To add a new organizer, copy a block and fill in the details.
+  Place the photo file in assets/images/organizers/
   NeurIPS allows a maximum of 8 organizers per proposal.
 -->
 
 ## Izzeddin Teeti
-- photo: placeholder.svg
+- photo: izzeddin_teeti.jpg
+- url: 
 - affiliation: Amazon
 - country: USA
 
 ## Amr Abdelraouf
-- photo: placeholder.svg
+- photo: amr_abdelraouf.jpg
+- url: 
 - affiliation: Amazon
 - country: USA
 
 ## Hesham Eraqi
-- photo: placeholder.svg
+- photo: hesham_eraqi.jpg
+- url: https://heshameraqi.github.io/
 - affiliation: Amazon
 - country: USA
 
 ## Salman Khan
-- photo: placeholder.svg
+- photo: salman_khan.jpg
+- url: 
 - affiliation: Elm Company
 - country: KSA
 
-## Mohamed Moustafa
-- photo: placeholder.svg
+## Dr. Mohamed Moustafa
+- photo: mohamed_moustafa.jpg
+- url: 
 - affiliation: Amazon
 - country: USA
