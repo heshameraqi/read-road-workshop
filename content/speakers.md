@@ -14,44 +14,44 @@ Leading researchers spanning VLMs, GNNs, HD mapping, and geospatial foundation m
   Place the photo file in assets/images/speakers/
 -->
 
-## Raquel Urtasun
-- photo: raquel_urtasun.jpg
-- url: https://www.cs.toronto.edu/~urtasun/
-- affiliation: Waabi / University of Toronto
-- country: Canada
-- topic: Sensor-to-Map at Scale
+## Speaker 1
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA
 
-## Sanja Fidler
-- photo: sanja_fidler.jpg
-- url: https://www.cs.utoronto.ca/~fidler/
-- affiliation: NVIDIA / University of Toronto
-- country: Canada
-- topic: Scene Graph – HD Map Alignment
+## Speaker 2
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA
 
-## Laura Leal-Taixé
-- photo: laura_leal_taixe.jpg
-- url: https://dvl.in.tum.de/team/lealtaixe/
-- affiliation: NVIDIA / TU Munich
-- country: Germany
-- topic: Tracking & Visual Localization for Map Maintenance
+## Speaker 3
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA
 
-## Xinggang Wang
-- photo: xinggang_wang.jpg
-- url: https://xwcv.github.io/
-- affiliation: HUST
-- country: China
-- topic: HD Map Construction (MapTR)
+## Speaker 4
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA
 
-## Mohamed Elhoseiny
-- photo: mohamed_elhoseiny.jpg
-- url: https://www.mohamed-elhoseiny.com/
-- affiliation: KAUST
-- country: Saudi Arabia
-- topic: Spatial Reasoning in VLMs
+## Speaker 5
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA
 
-## Holger Caesar
-- photo: holger_caesar.jpg
-- url: https://www.tudelft.nl/en/staff/h.caesar/
-- affiliation: TU Delft
-- country: Netherlands
-- topic: Benchmarks (nuScenes/nuPlan)
+## Speaker 6
+- photo: placeholder.svg
+- url: 
+- affiliation: TBA
+- country: 
+- topic: TBA

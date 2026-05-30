@@ -22,4 +22,4 @@ NeurIPS 2026 Venue
 Full-Day Workshop
 
 ## Contact Email
-readtheroad.workshop@amazon.com
+TBD

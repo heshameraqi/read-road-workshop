@@ -180,6 +180,9 @@ img {
     align-items: center;
     justify-content: center;
     background: var(--gradient-hero);
+    background-image: url('../images/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
