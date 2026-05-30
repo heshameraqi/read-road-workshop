@@ -44,7 +44,7 @@
             <div class="hero-info">
                 <div class="hero-info-item">
                     <i class="fas fa-calendar-alt"></i>
-                    <span>2026</span>
+                    <span>December 2026</span>
                 </div>
                 <div class="hero-info-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -67,9 +67,9 @@
             <h2 class="section-title">About the Workshop</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-lead">Maps are the silent backbone of navigation, autonomous driving, urban planning, and logistics. Yet the process of constructing and maintaining accurate, richly-attributed maps remains surprisingly manual and brittle.</p>
-                    <p>Vision-language models (VLMs) can now describe street scenes with remarkable fidelity, graph neural networks (GNNs) can encode complex road topologies, and foundation models for geospatial data are rapidly maturing. What is missing is <strong>the bridge</strong>: the ability to read visual observations into structured map knowledge—detecting what has changed, inferring latent attributes, and associating observations with the correct map elements at scale.</p>
-                    <p>This workshop brings together researchers from <strong>computer vision</strong>, <strong>natural language processing</strong>, <strong>graph machine learning</strong>, <strong>autonomous driving</strong>, and <strong>geospatial science</strong> to tackle the end-to-end pipeline of visual observation → structured map knowledge.</p>
+                    <p>Maps are the silent backbone of navigation, autonomous driving, urban planning, and logistics. Yet the process of constructing and maintaining accurate, richly-attributed maps remains surprisingly manual and brittle.</p>
+                    <p>Meanwhile, vision-language models (VLMs) can now describe street scenes with remarkable fidelity, graph neural networks (GNNs) can encode complex road topologies, and foundation models for geospatial data are rapidly maturing. What is missing is <strong>the bridge</strong>: the ability to read visual observations into structured map knowledge—detecting what has changed, inferring latent attributes, and associating observations with the correct map elements at scale.</p>
+                    <p>This workshop brings together researchers from <strong>computer vision</strong>, <strong>natural language processing</strong>, <strong>graph machine learning</strong>, <strong>autonomous driving</strong>, and <strong>geospatial science</strong> to tackle the end-to-end pipeline of visual observation → structured map knowledge. We aim to catalyze a new research community at the intersection of these fields, establishing shared problems, benchmarks, and representations.</p>
                 </div>
                 <div class="about-highlights">
                     <div class="highlight-card">
@@ -105,38 +105,38 @@
             <div class="topics-grid">
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-traffic-light"></i></div>
-                    <h3>Traffic Sign/Signal ↔ Map Association</h3>
-                    <p>Associating detected signs with the correct road segment, intersection, or lane in a map graph—involving spatial reasoning, occlusion handling, and many-to-many matching.</p>
+                    <h3>Traffic Sign/Signal ↔ Map Element Association</h3>
+                    <p>Detecting traffic signs and signals in imagery is well-studied, but associating a detected sign with the correct road segment, intersection, or lane in a map graph remains an open challenge involving spatial reasoning, occlusion handling, and many-to-many matching.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-road"></i></div>
                     <h3>Visual Map Attribute Inference</h3>
-                    <p>Inferring road properties—speed limits, lane counts, surface type, access restrictions—from visual observations alone or combined with sparse map priors.</p>
+                    <p>Street-level imagery contains rich cues about road properties—speed limits, lane counts, surface type, access restrictions—that are expensive to annotate manually. We seek methods that infer these attributes reliably from visual observations alone or in combination with sparse map priors.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-exchange-alt"></i></div>
                     <h3>Change Detection for Map Maintenance</h3>
-                    <p>Detecting conflicts between new visual observations and existing map data: construction zones, new signage, altered lane configurations, and removed infrastructure.</p>
+                    <p>Maps decay the moment they are published. We invite work on detecting conflicts between new visual observations and existing map data, including construction zones, new signage, altered lane configurations, and removed infrastructure.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-brain"></i></div>
-                    <h3>VLMs for Geospatial Reasoning</h3>
-                    <p>Prompting strategies, fine-tuning approaches, and hybrid architectures that ground VLM outputs in map structures with precise spatial and topological reasoning.</p>
+                    <h3>Vision-Language Models for Geospatial Reasoning</h3>
+                    <p>VLMs excel at describing scenes but struggle with the precise spatial and topological reasoning required to place observations within a map coordinate frame. This theme explores prompting strategies, fine-tuning approaches, and hybrid architectures that ground VLM outputs in map structures.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-share-alt"></i></div>
-                    <h3>GNNs for Road Network Understanding</h3>
-                    <p>Topology-aware encodings and message-passing schemes tailored to road graphs for attribute propagation, link prediction, and conflation.</p>
+                    <h3>Graph Neural Networks for Road Network Understanding</h3>
+                    <p>Road networks are naturally graphs. GNNs offer principled tools for attribute propagation, link prediction, and conflation, yet their application to map construction and maintenance is nascent. We welcome work on topology-aware encodings and message-passing schemes tailored to road graphs.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-layer-group"></i></div>
                     <h3>Scene Graph ↔ HD Map Alignment</h3>
-                    <p>Aligning detected scene elements (lanes, barriers, crosswalks) to structured HD map layers—challenges in representation, registration, and uncertainty quantification.</p>
+                    <p>Autonomous vehicles increasingly rely on scene graphs as an intermediate representation. Aligning detected scene elements (lanes, barriers, crosswalks) to structured HD map layers poses unique challenges in representation, registration, and uncertainty quantification.</p>
                 </div>
                 <div class="topic-card">
                     <div class="topic-icon"><i class="fas fa-satellite"></i></div>
                     <h3>Sensor-to-Map Conflation</h3>
-                    <p>Matching heterogeneous sensor streams—GPS traces, camera observations, LiDAR scans—to existing map features through learned matching and multi-modal fusion.</p>
+                    <p>Matching heterogeneous sensor streams—GPS traces, camera observations, LiDAR scans—to existing map features is a prerequisite for map updating. We seek advances in learned matching, registration under noise, and fusion of multi-modal evidence.</p>
                 </div>
             </div>
         </div>
@@ -146,11 +146,10 @@
     <section class="section" id="speakers">
         <div class="container">
             <h2 class="section-title">Invited Speakers</h2>
-            <p class="section-description">Leading researchers spanning VLMs, GNNs, HD mapping, and geospatial foundation models.</p>
+            <p class="section-description">Use "placeholder.svg" until a real photo is added.</p>
             <div class="speakers-grid">
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with raquel_urtasun.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Raquel Urtasun">
                     </div>
                     <h3 class="speaker-name">Raquel Urtasun</h3>
@@ -159,7 +158,6 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with sanja_fidler.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Sanja Fidler">
                     </div>
                     <h3 class="speaker-name">Sanja Fidler</h3>
@@ -168,7 +166,6 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with laura_leal_taixe.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Laura Leal-Taixé">
                     </div>
                     <h3 class="speaker-name">Laura Leal-Taixé</h3>
@@ -177,7 +174,6 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with xinggang_wang.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Xinggang Wang">
                     </div>
                     <h3 class="speaker-name">Xinggang Wang</h3>
@@ -186,7 +182,6 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with mohamed_elhoseiny.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Mohamed Elhoseiny">
                     </div>
                     <h3 class="speaker-name">Mohamed Elhoseiny</h3>
@@ -195,7 +190,6 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <!-- Replace placeholder.svg with holger_caesar.jpg when available -->
                         <img src="assets/images/speakers/placeholder.svg" alt="Holger Caesar">
                     </div>
                     <h3 class="speaker-name">Holger Caesar</h3>
@@ -370,7 +364,7 @@
                     <div class="date-marker"></div>
                     <div class="date-content">
                         <h3>Workshop Date</h3>
-                        <p class="date-value">2026 (at NeurIPS)</p>
+                        <p class="date-value">December 2026 (at NeurIPS)</p>
                     </div>
                 </div>
             </div>
@@ -385,7 +379,6 @@
             <div class="organizers-grid">
                 <div class="organizer-card">
                     <div class="organizer-image">
-                        <!-- Replace placeholder.svg with izzeddin_teeti.jpg when available -->
                         <img src="assets/images/organizers/placeholder.svg" alt="Izzeddin Teeti">
                     </div>
                     <h3>Izzeddin Teeti</h3>
@@ -394,7 +387,6 @@
                 </div>
                 <div class="organizer-card">
                     <div class="organizer-image">
-                        <!-- Replace placeholder.svg with amr_abdelraouf.jpg when available -->
                         <img src="assets/images/organizers/placeholder.svg" alt="Amr Abdelraouf">
                     </div>
                     <h3>Amr Abdelraouf</h3>
@@ -403,7 +395,6 @@
                 </div>
                 <div class="organizer-card">
                     <div class="organizer-image">
-                        <!-- Replace placeholder.svg with hesham_eraqi.jpg when available -->
                         <img src="assets/images/organizers/placeholder.svg" alt="Hesham Eraqi">
                     </div>
                     <h3>Hesham Eraqi</h3>
@@ -412,7 +403,6 @@
                 </div>
                 <div class="organizer-card">
                     <div class="organizer-image">
-                        <!-- Replace placeholder.svg with salman_khan.jpg when available -->
                         <img src="assets/images/organizers/placeholder.svg" alt="Salman Khan">
                     </div>
                     <h3>Salman Khan</h3>
@@ -421,10 +411,9 @@
                 </div>
                 <div class="organizer-card">
                     <div class="organizer-image">
-                        <!-- Replace placeholder.svg with mohamed_moustafa.jpg when available -->
-                        <img src="assets/images/organizers/placeholder.svg" alt="Dr. Mohamed Moustafa">
+                        <img src="assets/images/organizers/placeholder.svg" alt="Mohamed Moustafa">
                     </div>
-                    <h3>Dr. Mohamed Moustafa</h3>
+                    <h3>Mohamed Moustafa</h3>
                     <p class="organizer-affiliation">Amazon</p>
                     <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> USA</p>
                 </div>
