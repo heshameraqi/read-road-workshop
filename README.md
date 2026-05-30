@@ -2,7 +2,7 @@
 
 ## NeurIPS 2026 Workshop Website
 
-🌐 **Live site:** [https://heshameraqi.github.io/read-road-workshop/](https://heshameraqi.github.io/read-road-workshop/)
+🌐 **Live site:** [https://read-road.github.io/](https://read-road.github.io/)
 
 ---
 
@@ -98,12 +98,28 @@ read-road-workshop/
 
 ### Deployment
 
-1. Create repo on GitHub: `heshameraqi/read-road-workshop`
-2. Push: `git push -u origin main`
-3. Enable GitHub Pages: Settings → Pages → Source: `main` branch, `/ (root)`
-4. Site will be live at: `https://heshameraqi.github.io/read-road-workshop/`
+**Live site:** https://read-road.github.io/
 
-Any push to `main` will automatically update the live site.
+**Setup (one-time):**
+```bash
+cd /Users/heraqi/_Work/Code/Websites/read-road-workshop
+
+# Remotes (already configured)
+git remote add origin https://github.com/read-road/read-road.github.io.git
+git remote add personal https://github.com/heshameraqi/read-road-workshop.git
+
+# Generate a PAT at https://github.com/settings/tokens (repo scope)
+# Use it as password when prompted
+```
+
+**Push changes:**
+```bash
+python3 build.py
+git add -A && git commit -m "your message"
+git push origin main && git push personal main
+```
+
+GitHub Pages auto-deploys from `main` on the org repo.
 
 ---
 
