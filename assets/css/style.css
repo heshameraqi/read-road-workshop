@@ -190,7 +190,7 @@ img {
     transform: translate(-50%, -50%);
     width: 70%;
     max-width: 840px;
-    opacity: 0.4;
+    opacity: 0.3;
     pointer-events: none;
     z-index: 1;
     border-radius: var(--radius-lg);
