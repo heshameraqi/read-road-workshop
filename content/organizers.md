@@ -14,13 +14,13 @@
 
 ## Izzeddin Teeti
 - photo: izzeddin_teeti.jpg
-- url: 
+- url: https://www.linkedin.com/in/izzeddin-teeti/
 - affiliation: Amazon
 - country: USA
 
 ## Amr Abdelraouf
 - photo: amr_abdelraouf.jpg
-- url: 
+- url: https://www.linkedin.com/in/amr-abdelraouf/
 - affiliation: Amazon
 - country: USA
 
@@ -38,6 +38,6 @@
 
 ## Dr. Mohamed Moustafa
 - photo: mohamed_moustafa.jpg
-- url: 
+- url: https://www.linkedin.com/in/mohamed-n-moustafa/
 - affiliation: Amazon
 - country: USA
