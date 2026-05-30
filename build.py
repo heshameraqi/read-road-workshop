@@ -449,7 +449,7 @@ def generate_html():
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">ReadTheRoad</a>
+            <a href="#" class="nav-logo">Read the Road Workshop</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
