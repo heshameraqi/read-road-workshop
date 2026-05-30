@@ -1,15 +1,21 @@
 /* =============================================
-   Read the Road - NeurIPS 2026 Workshop
+   Learning to Read the Road — NeurIPS 2026 Workshop
+   Stylesheet
    ============================================= */
 
-/* CSS Variables */
+/* Design Tokens
+   Centralized color palette, spacing, and typography variables.
+   Edit these to change the site's look globally. */
 :root {
-    --primary: #1a365d;
+    /* Brand colors */
+    --primary: #1a365d;          /* Dark navy — headings, accents */
     --primary-light: #2d5a9e;
-    --accent: #0ea5e9;
+    --accent: #0ea5e9;           /* Sky blue — links, highlights */
     --accent-light: #38bdf8;
     --accent-dark: #0284c7;
-    --dark: #0f172a;
+    --dark: #0f172a;             /* Near-black — footer, hero */
+
+    /* Neutral scale */
     --gray-900: #1e293b;
     --gray-800: #334155;
     --gray-700: #475569;
@@ -20,18 +26,26 @@
     --gray-200: #f1f5f9;
     --gray-100: #f8fafc;
     --white: #ffffff;
+
+    /* Gradients */
     --gradient-primary: linear-gradient(135deg, #1a365d 0%, #0ea5e9 100%);
     --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0c4a6e 100%);
+
+    /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+    /* Border radii */
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 16px;
-    --radius-xl: 24px;
+
+    /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+
+    /* Motion */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
