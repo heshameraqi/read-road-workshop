@@ -180,9 +180,6 @@ img {
     align-items: center;
     justify-content: center;
     background: var(--gradient-hero);
-    background-image: url('../images/hero-bg.svg');
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
 }
 
@@ -193,10 +190,10 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(ellipse at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 40%),
-        radial-gradient(ellipse at 50% 80%, rgba(2, 132, 199, 0.08) 0%, transparent 40%);
+    background-image: url('../images/hero-bg.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
     pointer-events: none;
 }
 
@@ -207,20 +204,12 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 58, 95, 0.5) 50%, rgba(12, 74, 110, 0.6) 100%);
     pointer-events: none;
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 .hero-content {
