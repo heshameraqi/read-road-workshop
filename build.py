@@ -469,6 +469,7 @@ def generate_html():
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
+        <img src="assets/images/hero-bg.gif" alt="" class="hero-bg-gif">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">{workshop.get('conference', 'NeurIPS 2026 Workshop')}</div>

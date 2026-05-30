@@ -183,33 +183,28 @@ img {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-bg-gif {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../images/hero-bg.gif');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.35;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    opacity: 0.4;
     pointer-events: none;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 58, 95, 0.5) 50%, rgba(12, 74, 110, 0.6) 100%);
-    pointer-events: none;
+    z-index: 1;
+    border-radius: var(--radius-lg);
 }
 
 .hero-overlay {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content {
