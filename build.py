@@ -472,7 +472,7 @@ def generate_html():
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">{workshop.get('conference', 'NeurIPS 2026 Workshop')}</div>
-            <h1 class="hero-title">{workshop.get('title', 'Learning to Read the Road')}</h1>
+            <h1 class="hero-title">{workshop.get('title', 'Read the Road Workshop')}</h1>
             <p class="hero-subtitle">{workshop.get('subtitle', 'From Visual Observations to Map Knowledge')}</p>
             <p class="hero-tagline">{workshop.get('tagline', '')}</p>
             <div class="hero-info">
@@ -616,7 +616,7 @@ def generate_html():
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <h3>{workshop.get('title', 'Learning to Read the Road')}</h3>
+                    <h3>{workshop.get('title', 'Read the Road')}</h3>
                     <p>{workshop.get('conference', 'NeurIPS 2026 Workshop')}</p>
                 </div>
                 <div class="footer-links">
@@ -631,7 +631,7 @@ def generate_html():
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 {workshop.get('title', 'Learning to Read the Road')} Workshop. All rights reserved.</p>
+                <p>&copy; 2026 {workshop.get('title', 'Read the Road')} Workshop. All rights reserved.</p>
             </div>
         </div>
     </footer>

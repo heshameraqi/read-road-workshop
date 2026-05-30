@@ -1,7 +1,7 @@
 # Workshop Details
 
 ## Title
-Learning to Read the Road
+Read the Road
 
 ## Subtitle
 From Visual Observations to Map Knowledge

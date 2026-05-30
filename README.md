@@ -1,4 +1,4 @@
-# Learning to Read the Road: From Visual Observations to Map Knowledge
+# Read the Road: From Visual Observations to Map Knowledge
 
 ## NeurIPS 2026 Workshop Website
 

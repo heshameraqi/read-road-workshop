@@ -1,5 +1,5 @@
 // =============================================
-// Learning to Read the Road - NeurIPS 2026 Workshop
+// Read the Road - NeurIPS 2026 Workshop
 // Main JavaScript
 // =============================================
 
