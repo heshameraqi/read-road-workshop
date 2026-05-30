@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning to Read the Road | NeurIPS 2026 Workshop</title>
+    <meta name="description" content="Learning to Read the Road: From Visual Observations to Map Knowledge - NeurIPS 2026 Workshop">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ReadTheRoad</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#topics" class="nav-link">Topics</a></li>
+                <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#cfp" class="nav-link">Call for Papers</a></li>
+                <li><a href="#organizers" class="nav-link">Organizers</a></li>
+                <li><a href="#dates" class="nav-link">Dates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">NeurIPS 2026 Workshop</div>
+            <h1 class="hero-title">Learning to Read the Road</h1>
+            <p class="hero-subtitle">From Visual Observations to Map Knowledge</p>
+            <p class="hero-tagline">Uniting vision, language, and graph models to extract, associate, and maintain structured road knowledge from visual observations.</p>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2026</span>
+                </div>
+                <div class="hero-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>NeurIPS 2026 Venue</span>
+                </div>
+                <div class="hero-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Full-Day Workshop</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About the Workshop</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">Maps are the silent backbone of navigation, autonomous driving, urban planning, and logistics. Yet the process of constructing and maintaining accurate, richly-attributed maps remains surprisingly manual and brittle.</p>
+                    <p>Vision-language models (VLMs) can now describe street scenes with remarkable fidelity, graph neural networks (GNNs) can encode complex road topologies, and foundation models for geospatial data are rapidly maturing. What is missing is <strong>the bridge</strong>: the ability to read visual observations into structured map knowledge—detecting what has changed, inferring latent attributes, and associating observations with the correct map elements at scale.</p>
+                    <p>This workshop brings together researchers from <strong>computer vision</strong>, <strong>natural language processing</strong>, <strong>graph machine learning</strong>, <strong>autonomous driving</strong>, and <strong>geospatial science</strong> to tackle the end-to-end pipeline of visual observation → structured map knowledge.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Vision</h3>
+                        <p>VLMs can "see" roads but cannot "read" them into maps</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Graphs</h3>
+                        <p>GNNs + vision convergence is underexplored for map construction</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3>Freshness</h3>
+                        <p>10–15% of road attributes change annually; maps need real-time maintenance</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-users"></i></div>
+                        <h3>Community</h3>
+                        <p>No unifying venue exists for visual-to-map research</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="section section-alt" id="topics">
+        <div class="container">
+            <h2 class="section-title">Research Topics</h2>
+            <p class="section-description">We invite submissions spanning the full pipeline from visual observation to structured map knowledge.</p>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-traffic-light"></i></div>
+                    <h3>Traffic Sign/Signal ↔ Map Association</h3>
+                    <p>Associating detected signs with the correct road segment, intersection, or lane in a map graph—involving spatial reasoning, occlusion handling, and many-to-many matching.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-road"></i></div>
+                    <h3>Visual Map Attribute Inference</h3>
+                    <p>Inferring road properties—speed limits, lane counts, surface type, access restrictions—from visual observations alone or combined with sparse map priors.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Change Detection for Map Maintenance</h3>
+                    <p>Detecting conflicts between new visual observations and existing map data: construction zones, new signage, altered lane configurations, and removed infrastructure.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-brain"></i></div>
+                    <h3>VLMs for Geospatial Reasoning</h3>
+                    <p>Prompting strategies, fine-tuning approaches, and hybrid architectures that ground VLM outputs in map structures with precise spatial and topological reasoning.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-share-alt"></i></div>
+                    <h3>GNNs for Road Network Understanding</h3>
+                    <p>Topology-aware encodings and message-passing schemes tailored to road graphs for attribute propagation, link prediction, and conflation.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Scene Graph ↔ HD Map Alignment</h3>
+                    <p>Aligning detected scene elements (lanes, barriers, crosswalks) to structured HD map layers—challenges in representation, registration, and uncertainty quantification.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon"><i class="fas fa-satellite"></i></div>
+                    <h3>Sensor-to-Map Conflation</h3>
+                    <p>Matching heterogeneous sensor streams—GPS traces, camera observations, LiDAR scans—to existing map features through learned matching and multi-modal fusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="section" id="speakers">
+        <div class="container">
+            <h2 class="section-title">Invited Speakers</h2>
+            <p class="section-description">Leading researchers spanning VLMs, GNNs, HD mapping, and geospatial foundation models.</p>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with raquel_urtasun.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Raquel Urtasun">
+                    </div>
+                    <h3 class="speaker-name">Raquel Urtasun</h3>
+                    <p class="speaker-affiliation">Waabi / University of Toronto</p>
+                    <p class="speaker-topic">Sensor-to-Map at Scale</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with sanja_fidler.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Sanja Fidler">
+                    </div>
+                    <h3 class="speaker-name">Sanja Fidler</h3>
+                    <p class="speaker-affiliation">NVIDIA / University of Toronto</p>
+                    <p class="speaker-topic">Scene Graph – HD Map Alignment</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with laura_leal_taixe.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Laura Leal-Taixé">
+                    </div>
+                    <h3 class="speaker-name">Laura Leal-Taixé</h3>
+                    <p class="speaker-affiliation">NVIDIA / TU Munich</p>
+                    <p class="speaker-topic">Tracking & Visual Localization for Map Maintenance</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with xinggang_wang.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Xinggang Wang">
+                    </div>
+                    <h3 class="speaker-name">Xinggang Wang</h3>
+                    <p class="speaker-affiliation">HUST</p>
+                    <p class="speaker-topic">HD Map Construction (MapTR)</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with mohamed_elhoseiny.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Mohamed Elhoseiny">
+                    </div>
+                    <h3 class="speaker-name">Mohamed Elhoseiny</h3>
+                    <p class="speaker-affiliation">KAUST</p>
+                    <p class="speaker-topic">Spatial Reasoning in VLMs</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <!-- Replace placeholder.svg with holger_caesar.jpg when available -->
+                        <img src="assets/images/speakers/placeholder.svg" alt="Holger Caesar">
+                    </div>
+                    <h3 class="speaker-name">Holger Caesar</h3>
+                    <p class="speaker-affiliation">TU Delft</p>
+                    <p class="speaker-topic">Benchmarks (nuScenes/nuPlan)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section section-alt" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Workshop Schedule</h2>
+            <p class="section-description">Full-day workshop (~8 hours) with talks, posters, demos, and panel discussion.</p>
+            <div class="schedule-table">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 – 09:15</div>
+                    <div class="schedule-content">
+                        <h3>Opening Remarks & Workshop Framing</h3>
+                        <span class="schedule-duration">15 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">09:15 – 10:15</div>
+                    <div class="schedule-content">
+                        <h3>Invited Talk 1 + Invited Talk 2</h3>
+                        <span class="schedule-duration">60 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-break">
+                    <div class="schedule-time">10:15 – 10:45</div>
+                    <div class="schedule-content">
+                        <h3><i class="fas fa-coffee"></i> Coffee Break + Poster Setup</h3>
+                        <span class="schedule-duration">30 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 – 11:45</div>
+                    <div class="schedule-content">
+                        <h3>Contributed Oral Presentations</h3>
+                        <p>4 × 15 min talks</p>
+                        <span class="schedule-duration">60 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:45 – 12:45</div>
+                    <div class="schedule-content">
+                        <h3>Invited Talk 3 + Invited Talk 4</h3>
+                        <span class="schedule-duration">60 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-break">
+                    <div class="schedule-time">12:45 – 14:00</div>
+                    <div class="schedule-content">
+                        <h3><i class="fas fa-utensils"></i> Lunch + Poster Session</h3>
+                        <span class="schedule-duration">75 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">14:00 – 14:30</div>
+                    <div class="schedule-content">
+                        <h3>Invited Talk 5</h3>
+                        <span class="schedule-duration">30 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">14:30 – 15:30</div>
+                    <div class="schedule-content">
+                        <h3>Interactive Demo Session: Map Extraction Tools</h3>
+                        <span class="schedule-duration">60 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-break">
+                    <div class="schedule-time">15:30 – 16:00</div>
+                    <div class="schedule-content">
+                        <h3><i class="fas fa-coffee"></i> Coffee Break</h3>
+                        <span class="schedule-duration">30 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-highlight">
+                    <div class="schedule-time">16:00 – 17:00</div>
+                    <div class="schedule-content">
+                        <h3>Panel: "What Representation Should Maps of the Future Use?"</h3>
+                        <p>Debate: vectorized vs. neural vs. hybrid map representations</p>
+                        <span class="schedule-duration">60 min</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">17:00 – 17:15</div>
+                    <div class="schedule-content">
+                        <h3>Closing Remarks + Future Directions</h3>
+                        <span class="schedule-duration">15 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call for Papers Section -->
+    <section class="section" id="cfp">
+        <div class="container">
+            <h2 class="section-title">Call for Papers</h2>
+            <div class="cfp-content">
+                <div class="cfp-main">
+                    <p>We invite submissions of <strong>4-page extended abstracts</strong> (NeurIPS format, excluding references) covering any of the workshop topics. Accepted papers will be <strong>non-archival</strong>.</p>
+                    
+                    <h3>Submission Topics Include (but are not limited to):</h3>
+                    <ul class="cfp-topics">
+                        <li>Traffic sign/signal detection and map element association</li>
+                        <li>Visual inference of road attributes (speed limits, lane counts, surface type)</li>
+                        <li>Map change detection from visual observations</li>
+                        <li>Vision-language models for geospatial and topological reasoning</li>
+                        <li>Graph neural networks for road network modeling</li>
+                        <li>Scene graph to HD map alignment</li>
+                        <li>Multi-modal sensor-to-map conflation</li>
+                        <li>Self-supervised learning from fleet-scale unlabeled driving data</li>
+                        <li>Benchmarks and evaluation protocols for map extraction</li>
+                        <li>Foundation models for geospatial understanding</li>
+                    </ul>
+
+                    <h3>Submission Guidelines</h3>
+                    <ul class="cfp-guidelines">
+                        <li><strong>Format:</strong> NeurIPS 2026 workshop paper format (4 pages + references)</li>
+                        <li><strong>Review:</strong> Single-blind review process</li>
+                        <li><strong>Presentation:</strong> ~8 papers selected for oral presentation, ~20 for posters</li>
+                        <li><strong>Archival status:</strong> Non-archival (can be submitted elsewhere)</li>
+                    </ul>
+                </div>
+                <div class="cfp-sidebar">
+                    <div class="cfp-box">
+                        <h3><i class="fas fa-file-alt"></i> Submission Portal</h3>
+                        <p>OpenReview (link coming soon)</p>
+                        <a href="#" class="btn btn-primary btn-disabled">Submit Paper</a>
+                    </div>
+                    <div class="cfp-box">
+                        <h3><i class="fas fa-award"></i> Awards</h3>
+                        <p>Best Paper Award and Best Paper Runner-Up will be announced at the workshop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section class="section section-alt" id="dates">
+        <div class="container">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="dates-timeline">
+                <div class="date-item">
+                    <div class="date-marker"></div>
+                    <div class="date-content">
+                        <h3>Paper Submission Deadline</h3>
+                        <p class="date-value">TBD (September 2026)</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="date-marker"></div>
+                    <div class="date-content">
+                        <h3>Acceptance Notification</h3>
+                        <p class="date-value">TBD (October 2026)</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="date-marker"></div>
+                    <div class="date-content">
+                        <h3>Camera-Ready Deadline</h3>
+                        <p class="date-value">TBD (November 2026)</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="date-marker"></div>
+                    <div class="date-content">
+                        <h3>Workshop Date</h3>
+                        <p class="date-value">2026 (at NeurIPS)</p>
+                    </div>
+                </div>
+            </div>
+            <p class="dates-note">All deadlines are 23:59 Anywhere on Earth (AoE). Exact dates will be announced once the NeurIPS 2026 workshop schedule is finalized.</p>
+        </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section class="section" id="organizers">
+        <div class="container">
+            <h2 class="section-title">Organizers</h2>
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <div class="organizer-image">
+                        <!-- Replace placeholder.svg with izzeddin_teeti.jpg when available -->
+                        <img src="assets/images/organizers/placeholder.svg" alt="Izzeddin Teeti">
+                    </div>
+                    <h3>Izzeddin Teeti</h3>
+                    <p class="organizer-affiliation">Amazon</p>
+                    <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> USA</p>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-image">
+                        <!-- Replace placeholder.svg with amr_abdelraouf.jpg when available -->
+                        <img src="assets/images/organizers/placeholder.svg" alt="Amr Abdelraouf">
+                    </div>
+                    <h3>Amr Abdelraouf</h3>
+                    <p class="organizer-affiliation">Amazon</p>
+                    <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> USA</p>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-image">
+                        <!-- Replace placeholder.svg with hesham_eraqi.jpg when available -->
+                        <img src="assets/images/organizers/placeholder.svg" alt="Hesham Eraqi">
+                    </div>
+                    <h3>Hesham Eraqi</h3>
+                    <p class="organizer-affiliation">Amazon</p>
+                    <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> USA</p>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-image">
+                        <!-- Replace placeholder.svg with salman_khan.jpg when available -->
+                        <img src="assets/images/organizers/placeholder.svg" alt="Salman Khan">
+                    </div>
+                    <h3>Salman Khan</h3>
+                    <p class="organizer-affiliation">Elm Company</p>
+                    <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> KSA</p>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-image">
+                        <!-- Replace placeholder.svg with mohamed_moustafa.jpg when available -->
+                        <img src="assets/images/organizers/placeholder.svg" alt="Dr. Mohamed Moustafa">
+                    </div>
+                    <h3>Dr. Mohamed Moustafa</h3>
+                    <p class="organizer-affiliation">Amazon</p>
+                    <p class="organizer-location"><i class="fas fa-map-marker-alt"></i> USA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Learning to Read the Road</h3>
+                    <p>NeurIPS 2026 Workshop</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#topics">Topics</a>
+                    <a href="#speakers">Speakers</a>
+                    <a href="#schedule">Schedule</a>
+                    <a href="#cfp">Call for Papers</a>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> Contact: <a href="mailto:readtheroad.workshop@gmail.com">readtheroad.workshop@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Learning to Read the Road Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
