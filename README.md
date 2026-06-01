@@ -3,6 +3,7 @@
 ## NeurIPS 2026 Workshop Website
 
 🌐 **Live site:** [https://read-road.github.io/](https://read-road.github.io/)
+   **Local dev mirror:** [https://heshameraqi.github.io/read-road-workshop/](https://heshameraqi.github.io/read-road-workshop/)
 
 ---
 
