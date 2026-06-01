@@ -484,6 +484,168 @@ img {
 }
 
 /* =============================================
+   Challenge Section
+   ============================================= */
+.challenge-tracks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.challenge-track {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge-track::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.challenge-track:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.challenge-track-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.challenge-track-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(26, 54, 93, 0.1));
+    border-radius: var(--radius-sm);
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+}
+
+.challenge-track-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.challenge-track-desc {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.challenge-track-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.challenge-metrics {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+.challenge-prizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.challenge-prizes .prize {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.challenge-prizes .prize.gold {
+    background: rgba(245, 158, 11, 0.1);
+    color: #b45309;
+}
+
+.challenge-prizes .prize.silver {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--gray-700);
+}
+
+.challenge-prizes .prize.bronze {
+    background: rgba(180, 83, 9, 0.08);
+    color: #92400e;
+}
+
+.challenge-timeline {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+.challenge-timeline h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.challenge-timeline h3 i {
+    margin-right: 8px;
+    color: var(--accent-dark);
+}
+
+.challenge-timeline ul {
+    list-style: none;
+}
+
+.challenge-timeline li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+}
+
+.challenge-timeline li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.challenge-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =============================================
    Speakers Section
    ============================================= */
 .speakers-grid {

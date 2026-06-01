@@ -294,6 +294,59 @@ def parse_call_for_papers():
     return intro, topics, guidelines, portal, awards
 
 
+def parse_challenges():
+    """Parse challenges.md into intro, tracks, timeline, and note."""
+    text = read_file("challenges.md")
+    lines = text.strip().split("\n")
+    
+    intro = ""
+    tracks = []
+    timeline = []
+    note = ""
+    current_track = None
+    section = "intro"
+    
+    for line in lines:
+        if line.startswith("# "):
+            continue
+        elif line.startswith("## Track"):
+            section = "tracks"
+            if current_track:
+                tracks.append(current_track)
+            current_track = {"title": line[3:].strip(), "icon": "", "description": "", "metrics": "", "prize_1st": "", "prize_2nd": "", "prize_3rd": ""}
+        elif line.startswith("## Timeline"):
+            section = "timeline"
+            if current_track:
+                tracks.append(current_track)
+                current_track = None
+        elif line.startswith("## Note"):
+            section = "note"
+        elif section == "intro" and line.strip():
+            intro += (" " if intro else "") + line.strip()
+        elif section == "tracks" and current_track:
+            if line.startswith("- icon:"):
+                current_track["icon"] = line.split(":", 1)[1].strip()
+            elif line.startswith("- description:"):
+                current_track["description"] = line.split(":", 1)[1].strip()
+            elif line.startswith("- metrics:"):
+                current_track["metrics"] = line.split(":", 1)[1].strip()
+            elif line.startswith("- prize_1st:"):
+                current_track["prize_1st"] = line.split(":", 1)[1].strip()
+            elif line.startswith("- prize_2nd:"):
+                current_track["prize_2nd"] = line.split(":", 1)[1].strip()
+            elif line.startswith("- prize_3rd:"):
+                current_track["prize_3rd"] = line.split(":", 1)[1].strip()
+        elif section == "timeline" and line.startswith("- "):
+            timeline.append(line[2:].strip())
+        elif section == "note" and line.strip():
+            note += (" " if note else "") + line.strip()
+    
+    if current_track:
+        tracks.append(current_track)
+    
+    return intro, tracks, timeline, note
+
+
 def parse_dates():
     """Parse dates.md."""
     text = read_file("dates.md")
@@ -329,6 +382,7 @@ def generate_html():
     schedule_desc, schedule_items = parse_schedule()
     cfp_intro, cfp_topics, cfp_guidelines, cfp_portal, cfp_awards = parse_call_for_papers()
     dates_note, dates = parse_dates()
+    challenge_intro, challenge_tracks, challenge_timeline, challenge_note = parse_challenges()
     
     # Convert about text to HTML
     about_html = md_to_html_paragraphs(about_text)
@@ -431,6 +485,28 @@ def generate_html():
                     </div>
                 </div>"""
     
+    # Generate challenge tracks HTML
+    challenge_tracks_html = ""
+    for t in challenge_tracks:
+        challenge_tracks_html += f"""
+                <div class="challenge-track">
+                    <div class="challenge-track-header">
+                        <div class="challenge-track-icon"><i class="fas {t['icon']}"></i></div>
+                        <h3>{t['title']}</h3>
+                    </div>
+                    <p class="challenge-track-desc">{t['description']}</p>
+                    <div class="challenge-track-meta">
+                        <div class="challenge-metrics"><i class="fas fa-chart-bar"></i> <strong>Metrics:</strong> {t['metrics']}</div>
+                        <div class="challenge-prizes">
+                            <span class="prize gold"><i class="fas fa-trophy"></i> 1st: {t['prize_1st']}</span>
+                            <span class="prize silver"><i class="fas fa-medal"></i> 2nd: {t['prize_2nd']}</span>
+                            <span class="prize bronze"><i class="fas fa-award"></i> 3rd: {t['prize_3rd']}</span>
+                        </div>
+                    </div>
+                </div>"""
+    
+    challenge_timeline_html = "\n".join([f'                    <li>{item}</li>' for item in challenge_timeline])
+    
     # Build complete HTML
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -458,6 +534,7 @@ def generate_html():
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#topics" class="nav-link">Topics</a></li>
+                <li><a href="#challenge" class="nav-link">Challenge</a></li>
                 <li><a href="#speakers" class="nav-link">Speakers</a></li>
                 <li><a href="#schedule" class="nav-link">Schedule</a></li>
                 <li><a href="#cfp" class="nav-link">Call for Papers</a></li>
@@ -540,8 +617,25 @@ def generate_html():
         </div>
     </section>
 
+    <!-- Benchmark Challenge Section -->
+    <section class="section" id="challenge">
+        <div class="container">
+            <h2 class="section-title">Benchmark Challenge</h2>
+            <p class="section-description">{challenge_intro}</p>
+            <div class="challenge-tracks">{challenge_tracks_html}
+            </div>
+            <div class="challenge-timeline">
+                <h3><i class="fas fa-calendar-check"></i> Challenge Timeline</h3>
+                <ul>
+{challenge_timeline_html}
+                </ul>
+            </div>
+            <p class="challenge-note">{challenge_note}</p>
+        </div>
+    </section>
+
     <!-- Speakers Section -->
-    <section class="section" id="speakers">
+    <section class="section section-alt" id="speakers">
         <div class="container">
             <h2 class="section-title">Invited Speakers</h2>
             <p class="section-description">{speakers_desc}</p>

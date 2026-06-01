@@ -24,6 +24,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#topics" class="nav-link">Topics</a></li>
+                <li><a href="#challenge" class="nav-link">Challenge</a></li>
                 <li><a href="#speakers" class="nav-link">Speakers</a></li>
                 <li><a href="#schedule" class="nav-link">Schedule</a></li>
                 <li><a href="#cfp" class="nav-link">Call for Papers</a></li>
@@ -143,8 +144,74 @@
         </div>
     </section>
 
+    <!-- Benchmark Challenge Section -->
+    <section class="section" id="challenge">
+        <div class="container">
+            <h2 class="section-title">Benchmark Challenge</h2>
+            <p class="section-description">To ground the workshop's research themes in a concrete shared task, we organize a three-track benchmark challenge. The challenge progressively moves from perception to localization to map integration, mirroring the real-world pipeline of reading visual observations into map knowledge. Participants may enter one, two, or all three tracks.</p>
+            <div class="challenge-tracks">
+                <div class="challenge-track">
+                    <div class="challenge-track-header">
+                        <div class="challenge-track-icon"><i class="fas fa-crosshairs"></i></div>
+                        <h3>Track 1: Traffic Sign Segmentation & Tracking</h3>
+                    </div>
+                    <p class="challenge-track-desc">Given sequences of street-level images, detect, segment, and track all traffic signs across frames. Evaluates instance segmentation quality and temporal consistency under occlusion, motion blur, and varying illumination.</p>
+                    <div class="challenge-track-meta">
+                        <div class="challenge-metrics"><i class="fas fa-chart-bar"></i> <strong>Metrics:</strong> MOTA, IDF1, Mask IoU</div>
+                        <div class="challenge-prizes">
+                            <span class="prize gold"><i class="fas fa-trophy"></i> 1st: $2,000 AWS credits</span>
+                            <span class="prize silver"><i class="fas fa-medal"></i> 2nd: $1,000 AWS credits</span>
+                            <span class="prize bronze"><i class="fas fa-award"></i> 3rd: $700 AWS credits</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-track">
+                    <div class="challenge-track-header">
+                        <div class="challenge-track-icon"><i class="fas fa-map-pin"></i></div>
+                        <h3>Track 2: Sign Localization in Geographic Coordinates</h3>
+                    </div>
+                    <p class="challenge-track-desc">Given image sequences and tracklets from Track 1 (or provided as ground-truth input), estimate the latitude and longitude of each tracked sign. Bridges computer vision and geospatial reasoning via camera geometry, GPS/IMU data, and structure-from-motion.</p>
+                    <div class="challenge-track-meta">
+                        <div class="challenge-metrics"><i class="fas fa-chart-bar"></i> <strong>Metrics:</strong> Median localization error (meters), Recall at distance thresholds</div>
+                        <div class="challenge-prizes">
+                            <span class="prize gold"><i class="fas fa-trophy"></i> 1st: $3,000 AWS credits</span>
+                            <span class="prize silver"><i class="fas fa-medal"></i> 2nd: $2,000 AWS credits</span>
+                            <span class="prize bronze"><i class="fas fa-award"></i> 3rd: $1,000 AWS credits</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-track">
+                    <div class="challenge-track-header">
+                        <div class="challenge-track-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Track 3: Sign-to-Map Association (Digitization)</h3>
+                    </div>
+                    <p class="challenge-track-desc">Given localized sign tracklets, existing map data (OpenStreetMap road graph), and aerial/satellite imagery, associate each sign with the correct map element (road segment, intersection, or lane) it governs. This is the core association problem requiring spatial reasoning, graph matching, and multi-modal fusion.</p>
+                    <div class="challenge-track-meta">
+                        <div class="challenge-metrics"><i class="fas fa-chart-bar"></i> <strong>Metrics:</strong> Association Precision, Recall, F1 at map-element level</div>
+                        <div class="challenge-prizes">
+                            <span class="prize gold"><i class="fas fa-trophy"></i> 1st: $7,500 AWS credits</span>
+                            <span class="prize silver"><i class="fas fa-medal"></i> 2nd: $3,500 AWS credits</span>
+                            <span class="prize bronze"><i class="fas fa-award"></i> 3rd: $1,500 AWS credits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="challenge-timeline">
+                <h3><i class="fas fa-calendar-check"></i> Challenge Timeline</h3>
+                <ul>
+                    <li>T−8 weeks: Challenge announcement and dataset release (training + validation sets)</li>
+                    <li>T−6 weeks: Baseline code and evaluation server released</li>
+                    <li>T−2 weeks: Test set released (no ground truth)</li>
+                    <li>T−1 week: Submission deadline for predictions and 2-page technical reports</li>
+                    <li>Workshop day: Results announced; top-3 teams per track present methods (5 min each)</li>
+                </ul>
+            </div>
+            <p class="challenge-note">All winning teams will be invited to present during the Challenge Results session. Top-scoring technical reports will be considered for contributed oral presentation slots. We are exploring additional industry sponsorship for travel grants.</p>
+        </div>
+    </section>
+
     <!-- Speakers Section -->
-    <section class="section" id="speakers">
+    <section class="section section-alt" id="speakers">
         <div class="container">
             <h2 class="section-title">Invited Speakers</h2>
             <p class="section-description">Leading researchers spanning VLMs, GNNs, HD mapping, and geospatial foundation models.</p>
