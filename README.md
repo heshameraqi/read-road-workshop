@@ -113,9 +113,16 @@ git remote add personal https://github.com/heshameraqi/read-road-workshop.git
 # Use it as password when prompted
 ```
 
-**Push changes:**
+**Preview locally before pushing:**
 ```bash
 python3 build.py
+python3 -m http.server 8000
+# Open http://localhost:8000 and verify changes look good
+# Ctrl+C to stop the server when done
+```
+
+**Push changes:**
+```bash
 git add -A && git commit -m "your message"
 git push origin main && git push personal main
 ```
