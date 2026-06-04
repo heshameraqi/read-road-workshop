@@ -32,9 +32,15 @@
 
 ## Salman Khan
 - photo: salman_khan.jpg
-- url: 
+- url: https://scholar.google.com/citations?user=0kXugtIAAAAJ&hl=en
 - affiliation: Elm Company
 - country: KSA
+
+## Yamama Shakaa
+- photo: placeholder.svg
+- url: https://www.linkedin.com/in/yshakaa/
+- affiliation: 
+- country: 
 
 ## Dr. Mohamed Moustafa
 - photo: mohamed_moustafa.jpg
