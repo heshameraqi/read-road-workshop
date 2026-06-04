@@ -37,7 +37,7 @@
 - country: KSA
 
 ## Yamama Shakaa
-- photo: placeholder.svg
+- photo: yamama_shakaa.jpg
 - url: https://www.linkedin.com/in/yshakaa/
 - affiliation: 
 - country: 
